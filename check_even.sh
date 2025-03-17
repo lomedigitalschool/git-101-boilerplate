@@ -1,19 +1,14 @@
 #!/bin/bash
 
-# Demander à l'utilisateur d'entrer un nombre
+# Ask the user to enter a number
 echo "Enter a number:"
-read number
+read NUMBER
 
-# Vérifier si l'entrée est un nombre (entier positif ou négatif)
-if ! [[ "$number" =~ ^-?[0-9]+$ ]]; then
-    echo "Error: Please enter a valid integer."
-    exit 1
-fi
-
-# Vérifier si le nombre est pair ou impair
-if (( number % 2 == 0 )); then
-    echo "Bingo! Your number is even."
+# Check if the number is even or odd
+if (( NUMBER % 2 == 0 )); then
+    echo "Bingo, Your number is even."
 else
-    echo "Sorry, your number is odd."
+    echo "Sorry, Your number is odd."
 fi
+
 
